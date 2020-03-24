@@ -48,7 +48,7 @@ def second_connection(PORT):
 def first_connection():
     
     s   = ctx.socket(zmq.REQ)
-    s.connect("tcp://localhost:6000") #Ip del servidor
+    s.connect("tcp://localhost:6000") #Ip del proxy
 
     s.send_multipart([b'1'])
     m = s.recv_multipart()
